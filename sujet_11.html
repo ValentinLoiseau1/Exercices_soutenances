@@ -122,17 +122,15 @@
             else {
                 let i = 0;
                 //Execute dans que la condition de while ne l'arrête pas
-                do {
+                //Condition d'arret + appel de la fonction pour afficher le resultat en tableau/alert
+                while (resultat >= 0) {
                     i += 1;
                     resultat = hauteurDeDepart - (4.905 * ([i] * [i]));
                     tableau.push(parseInt(resultat));
                     console.log("Hauteur actuel : " + resultat + " a la " + i + " seconde.");
                 }
-                //Condition d'arret + appel de la fonction pour afficher le resultat en tableau/alert
-                while (resultat >= 0) {
-                    displayArray(tableau);
-                    return alert("Votre corps c'est écraser au sol au bout de " + i + " secondes après une chute de " + hauteurDeDepart + " mètres !");
-                }
+                displayArray(tableau);
+                return alert("Votre corps c'est écraser au sol au bout de " + i + " secondes après une chute de " + hauteurDeDepart + " mètres !");
             }
         }
     </script>
